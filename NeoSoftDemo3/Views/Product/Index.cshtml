@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Product List";
+}
+
+
+
+<div class="card-group"> 
+    @foreach (var product in Model)
+    {
+        <div class="card-my-3">
+            <div class="card-header">
+                <h3>@product.Name</h3> 
+            </div>
+
+            <img class="card-img-top" src="~/Images/Product/Apple.jpg" asp-append-version="true"  height="300",width="auto"/>
+            <div class="card-footer"></div>
+            <a href="#" class="btn btn-primary">Details</a>
+            <a href="#" class="btn btn-primary">Back</a>
+            <a href="#" class="btn btn-primary">Delete</a>
+        </div>
+      
+    }
+</div>
